@@ -10,7 +10,7 @@ public class Tester {
         JSONParser parser = new JSONParser("../manifest.json");
         String targetPath = parser.getTarget();
 
-        Application app = new Application(targetPath); // Successful
+        Application app = new Application(targetPath, true); // Successful
         app.launchApp();
 
         HashMap<String, String> appInfo = app.getAppData();

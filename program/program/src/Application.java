@@ -78,7 +78,17 @@ public class Application {
                 System.out.println("File does not exist: " + this.path);
                 return;
             }
-            Desktop.getDesktop().open(file);
+
+            if (!hidden) {
+                Desktop.getDesktop().open(file);
+            } else {
+                ProcessBuilder processBuilder = new ProcessBuilder(
+                        "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+                        "--headless"
+                );
+                processBuilder.redirectErrorStream(true);
+                processBuilder.start();
+            }
 
         } catch (IOException e) {
             System.out.println("Could not open file: " + this.path);
