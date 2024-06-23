@@ -7,6 +7,7 @@ public class Tester {
         JSONParser parser = new JSONParser("../manifest.json");
         String targetPath = parser.getTarget();
 
-        System.out.println(targetPath);
+        Application safari = new Application(targetPath);
+        safari.launchApp();
     }
 }
