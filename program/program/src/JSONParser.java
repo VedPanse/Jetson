@@ -7,7 +7,7 @@ import java.io.IOException;
  * This class provides functionality to parse the manifest.json file.
  */
 public class JSONParser {
-    private String jsonPath;
+    private final String jsonPath;
     private String target;
 
     /**

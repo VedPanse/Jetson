@@ -78,8 +78,8 @@ public class Application {
                 System.out.println("File does not exist: " + this.path);
                 return;
             }
-
             Desktop.getDesktop().open(file);
+
         } catch (IOException e) {
             System.out.println("Could not open file: " + this.path);
             e.printStackTrace();
@@ -168,9 +168,21 @@ public class Application {
         clipboard.setContents(stringSelection, stringSelection);
 
         Robot robot = new Robot();
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_V);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
+        String OS = System.getProperty("os.name").toLowerCase();
+
+        if (OS.contains("win")) {
+            robot.keyPress(KeyEvent.VK_CONTROL);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_CONTROL);
+        } else if (OS.contains("mac")) {
+            robot.keyPress(KeyEvent.VK_META);
+            robot.keyPress(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_V);
+            robot.keyRelease(KeyEvent.VK_META);
+        } else {
+            System.out.println("Unsupported OS: " + OS);
+        }
     }
+
 }

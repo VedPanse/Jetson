@@ -20,7 +20,7 @@ public class Tester {
         }
 
         try {
-            app.click(500, 300);
+            app.click(500, 200);
         } catch (AWTException e) {
             System.out.println("AWT Exception");
             e.printStackTrace();
