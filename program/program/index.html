@@ -10,13 +10,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+    <style>
+        html, body {
+            width: 100vw;
+            min-height: 100vh;
+            height: 100%;
+            margin: 0;
+        }
+
+        div.row {
+            min-height: 100vh;
+        }
+
+        div.row div.col-lg-2.left {
+            background-color: gray !important;
+        }
+    </style>
+
     <title>Jetson Wizard</title>
 </head>
 
 <body>
-<h1>Welcome to Jetson</h1>
-<p>Configure files to automate your script</p>
-<input placeholder="Enter name of the software"/>
+<div class="row">
+    <div class="col-lg-2 left">
+        Left Panel
+    </div>
+    <div class="col-lg-8 middle">
+        Middle Panel
+    </div>
+    <div class="col-lg-2 right">
+        Right Panel
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

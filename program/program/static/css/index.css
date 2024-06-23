@@ -3,3 +3,11 @@ html, body {
     min-height: 100vh;
     height: 100%;
 }
+
+div.row {
+    min-height: 100vh;
+}
+
+div.row div.col-lg-2.left {
+    background-color: gray !important;
+}
