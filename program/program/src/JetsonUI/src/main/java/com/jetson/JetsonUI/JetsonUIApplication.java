@@ -1,13 +1,13 @@
-package com.jetson.jetson_gui;
+package com.jetson.JetsonUI;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JetsonGuiApplication {
+public class JetsonUIApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JetsonGuiApplication.class, args);
+		SpringApplication.run(JetsonUIApplication.class, args);
 	}
 
 }

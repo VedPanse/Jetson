@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.jetson</groupId>
-	<artifactId>jetson-gui</artifactId>
+	<artifactId>JetsonUI</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>jetson-gui</name>
-	<description>Jetson Web Wizard</description>
+	<name>JetsonUI</name>
+	<description>GUI for Jetson</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -39,6 +39,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
 		</dependency>
 	</dependencies>
 

@@ -1,10 +1,10 @@
-package com.jetson.jetson_gui;
+package com.jetson.JetsonUI;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JetsonGuiApplicationTests {
+class JetsonUiApplicationTests {
 
 	@Test
 	void contextLoads() {
