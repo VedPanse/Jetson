@@ -10,11 +10,98 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <!-- Imported font prerequisites -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts imported -->
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+          rel="stylesheet">
+    <title>Jetson Wizard</title>
 </head>
 
 <body>
-<h1>Hello, ved</h1>
+<div class="row" id="parent">
+    <div class="col-lg-2" id="left">
+        <div id="profile-card">
+            <a href="#" class="profile-link">John Doe</a><br>
+            <button class="btn">New Project</button>
+        </div>
+
+        <div class="nav">
+            <a href="#" class="active">Saved Projects</a>
+            <a href="#">Scheduled Projects</a>
+            <a href="#">Deleted Projects</a>
+        </div>
+    </div>
+    <div class="col-lg-8" id="middle">
+        <h1>Saved Projects</h1><br><br>
+
+        <div class="card large" style="background-image: url(images/wall.jpg)">
+            <div class="context">
+                <h4>Calendar Automation</h4>
+                <p>28 Jul, 2023</p>
+            </div>
+        </div>
+        <div class="card small" style="background-image: url(images/sfo.avif)">
+            <div class="context">
+                <h4>Safari Automation</h4>
+                <p>28 Jul, 2023</p>
+            </div>
+        </div>
+        <br>
+        <!--        <div class="card small" style="background-image: url(images/building.jpg)">-->
+        <!--            <div class="context">-->
+        <!--                <h4>Home Automation</h4>-->
+        <!--                <p>28 Jul, 2023</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+        <!--        <div class="card large" style="background-image: url(images/abstract.avif)">-->
+        <!--            <div class="context">-->
+        <!--                <h4>Chrome automation</h4>-->
+        <!--                <p>28 Jul, 2023</p>-->
+        <!--            </div>-->
+        <!--        </div>-->
+
+        <section id="saved-scripts">
+            <h6>Saved Scripts</h6>
+            <a href="#">ad-blocker.js</a>
+            <a href="#" class="active">simulateMouse.kt</a>
+            <a href="#">TestAutomation.java</a>
+        </section>
+    </div>
+    <div class="col-lg-2" id="right">
+        <h2>Activity</h2>
+        <div id="activity-holder">
+            <div class="row">
+                <div class="col-lg-10">
+                    <p>Your scheduled script <a href="#">simulateMouse.kt</a> was run automatically.</p>
+                </div>
+                <div class="col-lg-2">
+                    1h
+                </div>
+                <div class="col-lg-10">
+                    <p>Your scheduled script <a href="#">simulateMouse.kt</a> was run automatically.</p>
+                </div>
+                <div class="col-lg-2">
+                    2h
+                </div>
+                <div class="col-lg-10">
+                    <p>You ran <a href="#">TestAutomation.java</a> successfully.</p>
+                </div>
+                <div class="col-lg-2">
+                    2d
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -27,6 +114,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+<script src="js/images.js"></script>
 </body>
 
 </html>

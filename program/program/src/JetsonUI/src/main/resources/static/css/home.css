@@ -1,0 +1,49 @@
+/*
+CSS SPECIFIC TO INDEX.HTML
+ */
+
+/* Saved scripts section */
+section#saved-scripts {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+section#saved-scripts a {
+    display: block;
+    padding: 2% 1% 2% 1%;
+    color: black;
+    background-color: var(--light-bg);
+    margin-top: 2%;
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px #aaaaaa;
+    width: 92%;
+}
+
+section#saved-scripts a.active {
+    background-color: var(--blue);
+    color: white;
+}
+
+section#saved-scripts a:active {
+    box-shadow: none;
+}
+
+section#saved-scripts a:hover {
+    text-decoration: none;
+}
+
+/* Activity holder section */
+div#activity-holder {
+    background-color: white;
+    border-radius: 20px;
+    padding: 5%;
+}
+
+div#activity-holder .col-lg-2 {
+    color: gray;
+    margin-bottom: 15%;
+}
+
+div#activity-holder a {
+    color: var(--blue);
+}

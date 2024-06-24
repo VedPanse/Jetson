@@ -1,0 +1,105 @@
+/*
+UNIVERSAL CSS
+*/
+
+/* root */
+:root {
+    --light-bg: #f9f8f8;
+    --dark-bg: #f4f5f4;
+    --blue: #0459fc;
+}
+
+/* general components */
+html, body {
+    width: 100vw;
+    min-height: 100vh;
+    height: 100%;
+    font-family: 'IBM Plex Sans', sans-serif;
+    background-color: var(--dark-bg);
+    overflow-x: hidden;
+}
+
+button {
+    border-radius: 14px !important;
+    background-color: var(--blue);
+    padding: 12px 35px 12px 35px !important;
+    color: white;
+}
+
+/* general layout */
+div.row#parent {
+    height: 100vh;
+}
+
+div#left {
+    background-color: var(--light-bg);
+}
+
+div#middle {
+    background-color: var(--dark-bg);
+    padding-left: 5%;
+}
+
+div#left, div#middle, div#right {
+    padding-top: 50px;
+}
+
+/* #left component Layout */
+div#left a {
+    display: block;
+    color: black;
+}
+
+div#profile-card {
+    width: 80%;
+    margin: auto;
+}
+
+a.profile-link {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+div.nav {
+    padding-top: 50%;
+    width: 95%;
+    margin: auto;
+}
+
+div.nav a {
+    width: 100%;
+    display: block;
+    padding: 3% 7% 3% 7%;
+    margin-top: 3%;
+}
+
+div.nav a.active {
+    background-color: #cccccc;
+    border-radius: 5px;
+}
+
+div#middle div.card {
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: inline-block;
+    border-radius: 15px;
+    position: relative;
+}
+
+div#middle div.card div.context {
+    position: absolute;
+    color: white;
+    bottom: 2%;
+}
+
+div#middle div.card div.context p {
+    font-size: 16px !important;
+}
+
+div#middle div.card.large div.context {
+    right: 2%;
+}
+
+div#middle div.card.small div.context {
+    left: 2%;
+}
