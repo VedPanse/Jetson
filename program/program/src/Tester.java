@@ -7,18 +7,21 @@ import java.util.HashMap;
  */
 public class Tester {
     public static void main(String[] args) {
+        // Get target app from JSON
         JSONParser parser = new JSONParser("../manifest.json");
         String targetPath = parser.getTarget();
 
-        Application app = new Application(targetPath, true); // Successful
+        // Launch app
+        Application app = new Application(targetPath);
         app.launchApp();
 
+        // Get app data
         HashMap<String, String> appInfo = app.getAppData();
 
         for (String key : appInfo.keySet()) {
             System.out.println(key + ": " + appInfo.get(key));
         }
-
+//        // Simulate clicks
 //        try {
 //            app.click(500, 200);
 //        } catch (AWTException e) {
@@ -28,6 +31,7 @@ public class Tester {
 //            e.printStackTrace();
 //        }
 
+        // Simulate keyboard events
         try {
             app.type("Hello World");
         } catch (AWTException e) {

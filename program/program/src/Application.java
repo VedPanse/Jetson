@@ -99,7 +99,7 @@ public class Application {
     }
 
     /**
-     * Get the details of the launched application in a HashMap<String, String>
+     * Get the details of the launched application in a HashMap
      * @return HashMap containing {field: value}
      */
     public HashMap<String, String> getAppData() {
@@ -130,6 +130,11 @@ public class Application {
         return info;
     }
 
+    /**
+     * Helper method to extract the extension of the file
+     * @param file the target app
+     * @return extension of file
+     */
     private String getFileExtension(File file) {
         String name = file.getName();
         int lastIndexOf = name.lastIndexOf(".");
@@ -139,6 +144,11 @@ public class Application {
         return name.substring(lastIndexOf);
     }
 
+    /**
+     * Helper method that extracts the permissions of the file.
+     * @param file the target app
+     * @return permissions of the file
+     */
     private String getPermissions(File file) {
         StringBuilder permissions = new StringBuilder();
 
@@ -163,6 +173,12 @@ public class Application {
         return permissions.toString();
     }
 
+    /**
+     * simulates clicks at the given coordinates
+     * @param x x coordinate
+     * @param y y coordinate
+     * @throws AWTException if error
+     */
     public void click(int x, int y) throws AWTException {
         Robot bot  = new Robot();
         bot.mouseMove(x, y);
@@ -172,6 +188,11 @@ public class Application {
         System.out.println("Clicked: " + x + ", " + y);
     }
 
+    /**
+     * Simulates typing to the application
+     * @param text text to be typed
+     * @throws AWTException if errors
+     */
     public void type(String text) throws AWTException {
         StringSelection stringSelection = new StringSelection(text);
         Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
