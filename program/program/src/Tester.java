@@ -2,9 +2,9 @@ import java.awt.*;
 import java.util.HashMap;
 
 /**
- * This class is the main tester class where all the components are brought together and JSON is interpreted to test the functioning.
+ * This class is the main tester class where all the components are brought together and JSON is interpreted to test the
+ * functioning.
  */
-
 public class Tester {
     public static void main(String[] args) {
         JSONParser parser = new JSONParser("../manifest.json");
@@ -19,14 +19,14 @@ public class Tester {
             System.out.println(key + ": " + appInfo.get(key));
         }
 
-        try {
-            app.click(500, 200);
-        } catch (AWTException e) {
-            System.out.println("AWT Exception");
-            e.printStackTrace();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            app.click(500, 200);
+//        } catch (AWTException e) {
+//            System.out.println("AWT Exception");
+//            e.printStackTrace();
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         try {
             app.type("Hello World");
