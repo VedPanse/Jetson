@@ -1,44 +1,63 @@
-# Launching Applications
+# Launching Applications with Jetson
 
-Launching applications with Jetson is easy. All you need to do is define a key called target in routine.json and set its value to the absolute patrh of the application that youu want to launch. Building on the first project example from [writing a basic project](start-project.md), the code should look like this:-
+This guide provides detailed instructions on how to configure and use the routine.json file to automate the launching and interaction of applications.
 
-**routine.json**
+**Configuration: ** routine.json
+
+**Example Configuration**
+The example configuration launches two applications and performs specified actions within them at 08:00 on Monday, Wednesday, and Friday.
+The routine.json file should be structured as follows:
+
 ```json
 {
-    "name": "first-project",
-    "author": "John Doe",
-    "description": "My First Project in Jetson",
-    "target": "/Applications/Safari.app"
+  "schedule": {
+    "time": "08:00",
+    "days": ["Monday", "Wednesday", "Friday"]
+  },
+  "applications": [
+    {
+      "name": "Application 1",
+      "path": "C:/path/to/application1.exe",
+      "actions": [
+        {
+          "type": "click",
+          "target": "button_id"
+        },
+        {
+          "type": "input",
+          "target": "text_field_id",
+          "value": "Sample text"
+        }
+      ]
+    },
+    {
+      "name": "Application 2",
+      "path": "C:/path/to/application2.exe",
+      "actions": [
+        {
+          "type": "open",
+          "target": "file_menu"
+        },
+        {
+          "type": "select",
+          "target": "file_option"
+        }
+      ]
+    }
+  ]
 }
 ```
 
-Be aware of the fact that applications in the 'Macintosh HD/Applications' folder on Mac should start with '/Applications'. Let's say you want to launch Safari. If you go to applications, right click on Safari, and click Get Info to get the absolute path, you will most likely find the path to be
-```bash
-Macintosh HD/Applications/Safari.app
-```
+## Key Elements
 
-You must ignore the Macintosh HD from the path and use the path as
-```bash
-/Applications/Safari.app
-```
+**Schedule**
+- time: Specifies the time to run the scripts (HH:MM format).
+- days: Specifies the days of the week to run the scripts.
 
-****
-
-## Hiding Application Launches
-
-Often, you might want to hide the application window right after it is launched for a smoother runtime of your automation software. You can achieve this by defining an additional property:-
-
-**routine.json**
-```json
-{
-    "name": "first-project",
-    "author": "John Doe",
-    "description": "My First Project in Jetson",
-    "target": "/Applications/Safari.app",
-    "hide-launch": true
-}
-```
-
-The default value of the *hide-launch* property is false.
-
-[Previous](start-project.md)
+**Applications**
+- name: Name of the application.
+- path: Path to the application’s executable file.
+- actions: A list of actions to perform within the application.
+- type: Type of action (e.g., click, input, open, select).
+- target: Target element for the action.
+- value (optional): Value to input, if applicable.
