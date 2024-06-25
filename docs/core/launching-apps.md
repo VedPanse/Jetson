@@ -10,7 +10,7 @@ The routine.json file should be structured as follows:
 
 ```json
 {
-  "project": {
+  "routine": {
     "name": "first-project",
     "author": "John Doe",
     "description": "My First Project in Jetson"

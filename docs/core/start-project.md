@@ -7,7 +7,7 @@ Automation scripts are referred to as routines. To define a routine, you need to
 routine.json:-
 ```json
 {
-  "project": {
+  "routine": {
     "name": "first-project",
     "author": "John Doe",
     "description": "My First Project in Jetson"
