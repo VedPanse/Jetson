@@ -1,8 +1,8 @@
 # Writing a basic project
 
-When you start a project, you usually start with writing in the name of the software, the author, and a description of the project. You can achieve it in through Jetson by creating a JSON filed named build.json and typing the following:-
+Automation scripts are known as routines. To define a routine, you must start with writing in the name of the software, the author, and a description of the project. You can achieve it in through Jetson by creating a JSON filed named routine.json and typing the following:-
 
-build.json:-
+routine.json:-
 ```json
 {
     "name": "first-project",

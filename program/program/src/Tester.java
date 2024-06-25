@@ -7,7 +7,7 @@ import java.util.HashMap;
 public class Tester {
     public static void main(String[] args) {
         // Get target app from JSON
-        JSONParser parser = new JSONParser("../build.json");
+        JSONParser parser = new JSONParser("../routine.json");
         String targetPath = parser.getTarget();
 
         // Launch app
