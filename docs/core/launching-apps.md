@@ -2,7 +2,7 @@
 
 This guide provides detailed instructions on how to configure and use the routine.json file to automate the launching and interaction of applications.
 
-**Configuration: ** routine.json
+**Configuration:** routine.json
 
 **Example Configuration**
 The example configuration launches two applications and performs specified actions within them at 08:00 on Monday, Wednesday, and Friday.
