@@ -28,10 +28,14 @@ Often, you might want to hide the application window right after it is launched 
 
 ```json
 {
-    ...
-    "hide-launch" : true,
-    ...
+    "name": "first-project",
+    "author": "John Doe",
+    "description": "My First Project in Jetson",
+    "target": "/Applications/Safari.app",
+    "hide-launch": true
 }
 ```
+
+The default value of the **hide-launch** property is false.
 
 [Previous](start-project.md)
