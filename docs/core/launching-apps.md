@@ -2,7 +2,7 @@
 
 Launching applications with Jetson is easy. All you need to do is define a key called target in build.json and set its value to the absolute patrh of the application that youu want to launch. Building on the first project example from [writing a basic project](start-project.md), the code should look like this:-
 
-build.json:-
+**build.json**
 ```json
 {
     "name": "first-project",
@@ -26,8 +26,9 @@ You must ignore the Macintosh HD from the path and use the path as
 
 ## Hiding Application Launches
 
-Often, you might want to hide the application window right after it is launched for a smoother runtime of your automation software. You can achieve this by defining an additional property in build.json:-
+Often, you might want to hide the application window right after it is launched for a smoother runtime of your automation software. You can achieve this by defining an additional property:-
 
+**build.json**
 ```json
 {
     "name": "first-project",
