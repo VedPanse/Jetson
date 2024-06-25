@@ -10,11 +10,11 @@ section#saved-scripts {
 
 section#saved-scripts a {
     display: block;
-    padding: 2% 1% 2% 1%;
+    padding: 2% 20px 2% 20px;
     color: black;
     background-color: var(--light-bg);
     margin-top: 2%;
-    border-radius: 25px;
+    border-radius: 20px;
     box-shadow: 3px 3px 3px #aaaaaa;
     width: 92%;
 }
@@ -37,11 +37,16 @@ div#activity-holder {
     background-color: white;
     border-radius: 20px;
     padding: 5%;
+    width: 95%;
+    margin: auto;
+    position: relative;
+    left: -5px;
 }
 
 div#activity-holder .col-lg-2 {
     color: gray;
     margin-bottom: 15%;
+    padding: 2%;
 }
 
 div#activity-holder a {
