@@ -21,3 +21,6 @@ You must ignore the Macintosh HD from the path and use the path as
 ```bash
 /Applications/Safari.app
 ```
+
+[Previous](start-project.md)
+[Next](getting-app-info.md)
