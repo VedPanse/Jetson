@@ -22,5 +22,16 @@ You must ignore the Macintosh HD from the path and use the path as
 /Applications/Safari.app
 ```
 
+## Hiding Application Launches
+
+Often, you might want to hide the application window right after it is launched for a smoother runtime of your automation software. You can achieve this by defining an additional property in build.json:-
+
+```json
+{
+    ...
+    "hide-launch" : true,
+    ...
+}
+```
+
 [Previous](start-project.md)
-[Next](getting-app-info.md)
