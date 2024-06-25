@@ -36,6 +36,6 @@ Often, you might want to hide the application window right after it is launched 
 }
 ```
 
-The default value of the **hide-launch** property is false.
+The default value of the *hide-launch* property is false.
 
 [Previous](start-project.md)
