@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.util.HashMap;
 
 /**
@@ -32,10 +31,5 @@ public class Tester {
 //        }
 
         // Simulate keyboard events
-        try {
-            app.type("Hello World");
-        } catch (AWTException e) {
-            System.out.println("AWTException");
-        }
     }
 }
