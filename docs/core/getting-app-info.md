@@ -1,1 +1,0 @@
-# Getting Target Application Information
