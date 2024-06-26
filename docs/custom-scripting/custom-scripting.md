@@ -12,7 +12,7 @@ Instead of managing a really long JSON file, you can put all the code in a scrip
     },
     "schedule": {
         "time": ["19:00"],
-        "days" ["Saturday", "Sunday"]
+        "days": ["Saturday", "Sunday"]
     },
     "applications": [
         {
@@ -23,3 +23,7 @@ Instead of managing a really long JSON file, you can put all the code in a scrip
     ]
 }
 ```
+
+Although you can use scripts in any programming language you want, we recommend you use Java. Jetson comes with a library that has pre-defined components and provides easy access to interact with the components of the launched application, like inputs, buttons, text, etc.
+
+[Previous](../core/launching-apps.md)
