@@ -2,9 +2,9 @@
 
 Writing a Basic Project
 
-Automation scripts are referred to as routines. To define a routine, you need to start by specifying the name of the project, the author, and a brief description. This can be achieved in Jetson by creating a JSON file named routine.json and including the following content:
+Automation scripts are referred to as routines. To define a routine, you need to start by specifying the name of the project, the author, and a brief description. This can be achieved in Jetson by creating a JSON file with "routine" as the compound extension and including the following content:
 
-routine.json:-
+test-1.routine.json:-
 ```json
 {
   "routine": {
