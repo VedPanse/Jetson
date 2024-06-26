@@ -17,4 +17,4 @@ test.routine.json:-
 
 This JSON file should compile successfully when you run Main.java.
 
-[Next Page](launching-apps.md)
+[Next](launching-apps.md)
