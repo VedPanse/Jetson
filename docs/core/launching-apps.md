@@ -1,4 +1,4 @@
-# Launching Applications with Jetson
+# Launching Applications with Jetson using only JSON
 
 This guide provides detailed instructions on how to configure and use the routine.json file to automate the launching and interaction of applications.
 
