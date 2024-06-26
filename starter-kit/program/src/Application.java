@@ -10,6 +10,8 @@ import java.nio.file.attribute.BasicFileAttributes;
 import java.nio.file.attribute.FileTime;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
 /**
  * This class simulates an application and offers methods for users to interact with the target application.
@@ -216,4 +218,8 @@ public class Application {
         }
     }
 
+    public void launchWebDriver() {
+        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        WebDriver driver = new ChromeDriver();
+    }
 }

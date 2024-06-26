@@ -20,6 +20,7 @@ public class Tester {
         for (String key : appInfo.keySet()) {
             System.out.println(key + ": " + appInfo.get(key));
         }
+        app.launchWebDriver();
 //        // Simulate clicks
 //        try {
 //            app.click(500, 200);
