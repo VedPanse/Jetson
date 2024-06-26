@@ -1,4 +1,4 @@
-# Launching Applications with Jetson Using Only JSON
+# Using Jetson JSON to Launch Applications
 
 This guide provides detailed instructions on how to configure and use routine JSON files to automate the launching and interaction of applications, using only JSON architecture.
 
