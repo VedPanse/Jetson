@@ -76,4 +76,52 @@ The routine.json file should be structured as follows:
 
 ## Writing routine JSON files the short way
 
+Writing JSON files the long way is optimal when writing simple automation scripts without dealing with complex components. But it could be tiresome when automating a large script. Jetson provides a better way to write routine JSON files by using a special key called 'script'. This tag should contain the path to the script you want to execute after launching the application. The best part about using script is that you can run scripts in any programming language.
+
+However, in order to use the special components we built in order to ease accessibility of target application components, you will have to use a Java file.
+
+**Configuration:** example.routine.json
+
+**Example Configuration**
+We can shorten the example.routine.json by replacing its contents with:-
+
+```json
+{
+  "routine": {
+    "name": "first-project",
+    "author": "John Doe",
+    "description": "My First Project in Jetson"
+  },
+  "schedule": {
+    "time": ["08:00", "23:00"],
+    "days": ["Monday", "Wednesday", "Friday"]
+  },
+  "applications": [
+    {
+      "name": "Home automation",
+      "path": "/Applications/Home.app",
+      "script": "/Users/example/myProgram.kts"
+    },
+    {
+      "name": "Food ordering automation",
+      "path": "/Applications/Chrome.app",
+      "actions": [
+        {
+          "type": "upload",
+          "target": [200, 100],
+          "files": ["/Users/example/file1.txt"]
+        }
+      ]
+    }
+  ]
+}
+```
+
+## Key Elements
+
+**Script**
+- The script can be run in every programming language installed on your computer.
+- In order to use the special components we wrote to increase the ease of accessing elements in the launched application, you will have to script in Java.
+
+
 [Previous](start-project.md)
