@@ -1,20 +1,21 @@
-# Launching Applications with Jetson using only JSON
+# Launching Applications with Jetson Using Only JSON
 
-This guide provides detailed instructions on how to configure and use the routine JSON file to automate the launching and interaction of applications, using only JSON architecture.
+This guide provides detailed instructions on how to configure and use routine JSON files to automate the launching and interaction of applications, using only JSON architecture.
 
-## Multiple ways of building routine JSON files
-There are two ways of building routines:-
-1. Writing JSON files manually (as covered on this page)
+## Multiple Ways of Building Routine JSON Files
+
+There are two ways of building routines:
+
+1. **Writing JSON files manually** (as covered on this page)
    - There is a [long](#writing-routine-json-files-the-long-way) and a [short](#writing-routine-json-files-the-short-way) way of writing routine JSON files. This page covers both.
-2. Skipping the code, using a [wizard](../gui-wizard/launching-gui.md) to write routine JSON files
+2. **Skipping the code**, using a [wizard](../gui-wizard/launching-gui.md) to write routine JSON files.
 
+## Writing Routine JSON Files the Long Way
 
-## Writing routine JSON files the long way
-**Configuration:** example.routine.json
+**Configuration:** `example.routine.json`
 
-**Example Configuration**
-The example configuration launches two applications and performs specified actions within them at 08:00 on Monday, Wednesday, and Friday.
-The routine.json file should be structured as follows:
+**Example Configuration:**
+The example configuration launches two applications and performs specified actions within them at 08:00 on Monday, Wednesday, and Friday. The routine JSON file should be structured as follows:
 
 ```json
 {
@@ -61,29 +62,29 @@ The routine.json file should be structured as follows:
 ## Key Elements
 
 **Schedule**
-- time: Specifies the time to run the scripts (HH:MM format).
-- days: Specifies the days of the week to run the scripts.
+- **time**: Specifies the time to run the scripts (HH:MM format).
+- **days**: Specifies the days of the week to run the scripts.
 
 **Applications**
-- name: Name of the software.
-- path: Path to the application’s executable file.
-- actions: A list of actions to perform within the application.
-- type: Type of action (e.g., click, input, upload).
-- target: Target element for the action in the form of [x_pixels, y_pixels].
-- value (optional): Value to input, if applicable.
+- **name**: Name of the software.
+- **path**: Path to the application’s executable file.
+- **actions**: A list of actions to perform within the application.
+- **type**: Type of action (e.g., click, input, upload).
+- **target**: Target element for the action in the form of [x_pixels, y_pixels].
+- **value (optional)**: Value to input, if applicable.
 
 ****
 
-## Writing routine JSON files the short way
+## Writing Routine JSON Files the Short Way
 
-Writing JSON files the long way is optimal when writing simple automation scripts without dealing with complex components. But it could be tiresome when automating a large script. Jetson provides a better way to write routine JSON files by using a special key called 'script'. This tag should contain the path to the script you want to execute after launching the application. The best part about using script is that you can run scripts in any programming language.
+Writing JSON files the long way is optimal when writing simple automation scripts without dealing with complex components. However, it can be tedious when automating a large script. Jetson provides a better way to write routine JSON files by using a special key called 'script'. This tag should contain the path to the script you want to execute after launching the application. The best part about using a script is that you can run scripts in any programming language.
 
-However, in order to use the special components we built in order to ease accessibility of target application components, you will have to use a Java file.
+However, to use the special components we built to ease accessibility of target application components, you will have to use a Java file.
 
-**Configuration:** example.routine.json
+**Configuration:** `example.routine.json`
 
-**Example Configuration**
-We can shorten the example.routine.json by replacing its contents with:-
+**Example Configuration:**
+We can shorten the example.routine.json by replacing its contents with:
 
 ```json
 {
@@ -120,8 +121,7 @@ We can shorten the example.routine.json by replacing its contents with:-
 ## Key Elements
 
 **Script**
-- The script can be run in every programming language installed on your computer.
-- In order to use the special components we wrote to increase the ease of accessing elements in the launched application, you will have to script in Java.
-
+- The script can be run in any programming language installed on your computer.
+- To use the special components we wrote to increase the ease of accessing elements in the launched application, you will have to script in Java.
 
 [Previous](start-project.md)
