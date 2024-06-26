@@ -1,7 +1,3 @@
-Sure, here's a refined version of the documentation for Jetson:
-
----
-
 # Custom Scripting with Jetson
 
 Jetson allows you to manage and automate tasks through custom scripts, reducing the need for lengthy JSON configurations. You can use any programming language for scripting, although we recommend using Java due to its robust library support.
