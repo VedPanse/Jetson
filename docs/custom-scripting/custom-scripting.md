@@ -96,3 +96,6 @@ To run the Java script as part of your Jetson routine, specify the script path i
 ## Conclusion
 
 Using custom scripts with Jetson enhances your ability to automate complex tasks. While you have the flexibility to choose any programming language, Java's comprehensive library support and ease of interaction with application elements make it a highly recommended choice.
+
+[Previous](../core/launching-apps.md)<br>
+[Next](getting-app-info.md)
