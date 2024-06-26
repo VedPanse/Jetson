@@ -66,3 +66,5 @@ The routine.json file should be structured as follows:
 - type: Type of action (e.g., click, input, open, select).
 - target: Target element for the action.
 - value (optional): Value to input, if applicable.
+
+[Previous](start-project.md)
