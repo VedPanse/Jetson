@@ -5,7 +5,7 @@ This guide provides detailed instructions on how to configure and use the routin
 ## Multiple ways of building routine JSON files
 There are two ways of building routines:-
 1. Writing JSON files manually (as covered on this page)
-   - There is a long and a short way of writing routine JSON files. This page covers both.
+   - There is a [long](#writing-routine-json-files-the-long-way) and a [short](#writing-routine-json-files-the-short-way) way of writing routine JSON files. This page covers both.
 2. Skipping the code, using a [wizard](../gui-wizard/launching-gui.md) to write routine JSON files
 
 
