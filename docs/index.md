@@ -9,4 +9,4 @@
 2. [Getting App Info](custom-scripting/getting-app-info.md)
 
 ## Using Jetson Wizard
-1. [Skip the code - Use GUI](gui-wizard/launching-gui.md)
+1. [Skip JSON - Use GUI](gui-wizard/launching-gui.md)
