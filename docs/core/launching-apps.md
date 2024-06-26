@@ -1,6 +1,11 @@
 # Launching Applications with Jetson using only JSON
 
-This guide provides detailed instructions on how to configure and use the routine.json file to automate the launching and interaction of applications.
+This guide provides detailed instructions on how to configure and use the routine JSON file to automate the launching and interaction of applications, using only JSON architecture.
+
+## Multiple ways of building routine JSON files
+There are two ways of building routines:-
+1. Writing JSON files manually (as covered on this page)
+2. Skipping the code, using a [wizard](gui-wizard/launching-gui.md) to write routine JSON files
 
 **Configuration:** routine.json
 
