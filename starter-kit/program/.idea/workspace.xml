@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2b0b21dd-f048-46d8-b569-d570c7947b47" name="Changes" comment="" />
+    <list default="true" id="2b0b21dd-f048-46d8-b569-d570c7947b47" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../playgrounds/program/libs/libs.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../playgrounds/program/program.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../playgrounds/program/program.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,18 +46,6 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -70,6 +64,8 @@
       <updated>1719419920579</updated>
       <workItem from="1719419922398" duration="160000" />
       <workItem from="1719420704408" duration="159000" />
+      <workItem from="1719471880746" duration="77000" />
+      <workItem from="1719471968241" duration="8000" />
     </task>
     <servers />
   </component>
