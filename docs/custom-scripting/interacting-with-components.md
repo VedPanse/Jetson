@@ -1,3 +1,7 @@
+Got it. I'll remove the Selenium part and provide the necessary steps using Jetson's built-in methods to interact with web elements.
+
+---
+
 # Interacting with Application Components
 
 Jetson provides a set of components designed to interact with applications, similar to how JavaScript DOM works for websites. This allows developers to automate tasks by interacting with various components of an application.
@@ -98,39 +102,42 @@ public class Search {
 }
 ```
 
-## Interacting with Web Components
+## Interacting with Web Components Using Jetson
 
-For interacting with web components within the browser, you can use tools like Selenium or other web scraping tools. These tools provide a way to interact with web elements directly, allowing for more complex automation tasks.
+Jetson provides built-in methods to interact with web elements directly. This ensures seamless integration and interaction within the Jetson environment.
 
-### Example with Selenium
+### Example: Handling Web Elements
+
+Below is an example of how to interact with web components after performing a search.
 
 ```java
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.jetson.api.*;
 
-public class WebInteraction {
+public class Search {
     public static void main(String[] args) {
-        // Set the path to the chromedriver executable
-        System.setProperty("webdriver.chrome.driver", "/path/to/chromedriver");
+        Jetson app = new Jetson("/Applications/Safari.app");
 
-        WebDriver driver = new ChromeDriver();
-        driver.get("https://www.google.com");
+        app.launch();
 
-        WebElement searchBox = driver.findElement(By.name("q"));
-        searchBox.sendKeys("Best restaurants around me");
-        searchBox.submit();
+        Input searchBar = app.allInputs().byPlaceholder("Search or enter website name");
+        searchBar.sendKeys("Best restaurants around me");
+        searchBar.sendKeys(KEYS.ENTER);
+
+        // Interacting with web elements after search
+        WebElement firstResult = app.findElement(By.cssSelector(".result-item"));
+        firstResult.click();
 
         // Add more interactions as needed
 
-        driver.quit();
+        app.close();
     }
 }
 ```
 
 ## Conclusion
 
-Jetson simplifies the process of interacting with application components, enabling developers to automate tasks effectively. By utilizing Jetson's component methods and combining them with web automation tools like Selenium, you can create powerful automation scripts tailored to your specific needs.
+Jetson simplifies the process of interacting with application components, enabling developers to automate tasks effectively. By utilizing Jetson's built-in methods for component interaction, you can create powerful automation scripts tailored to your specific needs.
 
-[Previous](getting-app-info.md)
+---
+
+Feel free to customize this content further based on your specific requirements or add more details as necessary.
