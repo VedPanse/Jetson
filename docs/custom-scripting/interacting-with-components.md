@@ -1,7 +1,3 @@
-Got it. I'll remove the Selenium part and provide the necessary steps using Jetson's built-in methods to interact with web elements.
-
----
-
 # Interacting with Application Components
 
 Jetson provides a set of components designed to interact with applications, similar to how JavaScript DOM works for websites. This allows developers to automate tasks by interacting with various components of an application.
@@ -137,7 +133,3 @@ public class Search {
 ## Conclusion
 
 Jetson simplifies the process of interacting with application components, enabling developers to automate tasks effectively. By utilizing Jetson's built-in methods for component interaction, you can create powerful automation scripts tailored to your specific needs.
-
----
-
-Feel free to customize this content further based on your specific requirements or add more details as necessary.
