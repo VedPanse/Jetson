@@ -5,6 +5,8 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import com.codeborne.selenide.logevents.SelenideLogger;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.*;
+
+import static com.example.seleniumautomation.MainPage.openPage;
 import static org.junit.jupiter.api.Assertions.*;
 
 import static com.codeborne.selenide.Condition.attribute;
@@ -21,7 +23,7 @@ public class MainPageTest {
 
     @BeforeEach    public void setUp() {
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://www.google.com/");
+        openPage("https://google.com");
     }
 
     @Test
