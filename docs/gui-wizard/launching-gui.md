@@ -14,3 +14,5 @@ An activity bar present on the right will log all the scripts that ran, so that 
 
 **Easy Scheduling**
 Instead of managing arrays of schedules in JSON, you can pick date and time to schedule a project run, saving you time and effort.
+
+[Previous](../custom-scripting/interacting-with-components.md)
