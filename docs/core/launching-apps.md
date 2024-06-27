@@ -124,4 +124,5 @@ We can shorten the example.routine.json by replacing its contents with:
 - The script can be run in any programming language installed on your computer.
 - To use the special components we wrote to increase the ease of accessing elements in the launched application, you will have to script in Java.
 
-[Previous](start-project.md)
+[Previous](start-project.md)<br>
+[Next](../custom-scripting/custom-scripting.md)
