@@ -132,3 +132,5 @@ public class WebInteraction {
 ## Conclusion
 
 Jetson simplifies the process of interacting with application components, enabling developers to automate tasks effectively. By utilizing Jetson's component methods and combining them with web automation tools like Selenium, you can create powerful automation scripts tailored to your specific needs.
+
+[Previous](getting-app-info.md)
