@@ -14,40 +14,19 @@ import static com.codeborne.selenide.Selenide.*;
 public class MainPageTest {
     MainPage mainPage = new MainPage();
 
-@BeforeAll    public static void setUpAll() {
+    @BeforeAll    public static void setUpAll() {
         Configuration.browserSize = "1280x800";
         SelenideLogger.addListener("allure", new AllureSelenide());
     }
 
-@BeforeEach    public void setUp() {
-        // Fix the issue https://github.com/SeleniumHQ/selenium/issues/11750
+    @BeforeEach    public void setUp() {
         Configuration.browserCapabilities = new ChromeOptions().addArguments("--remote-allow-origins=*");
-        open("https://www.jetbrains.com/");
+        open("https://www.google.com/");
     }
 
     @Test
     public void search() {
-        mainPage.searchButton.click();
-
-        $("[data-test='search-input']").sendKeys("Selenium");
-        $("button[data-test='full-search-button']").click();
-
-        $("input[data-test='search-input']").shouldHave(attribute("value", "Selenium"));
+        mainPage.search("Selenium");
+        mainPage.searchInput.shouldHave(attribute("value", "Selenium"));
     }
-
-    @Test
-    public void toolsMenu() {
-        mainPage.toolsMenu.click();
-
-        $("div[data-test='main-submenu']").shouldBe(visible);
-    }
-
-    @Test
-    public void navigationToAllTools() {
-        mainPage.seeDeveloperToolsButton.click();
-        mainPage.findYourToolsButton.click();
-
-        $("#products-page").shouldBe(visible);
-
-assertEquals("All Developer Tools and Products by JetBrains", Selenide.title());    }
 }
