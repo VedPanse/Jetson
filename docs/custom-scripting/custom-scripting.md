@@ -50,7 +50,7 @@ While you can use any programming language for your custom scripts, we recommend
 
 ### Example: Automating with Java
 
-Below is an example of how you might structure a Java script to interact with an application.
+Below is an example of how you might structure a Java program to interact with an application.
 
 ```java
 import com.jetson.api.*;
@@ -58,19 +58,14 @@ import com.jetson.api.*;
 public class OrderFood {
 
     public static void main(String[] args) {
-        JetsonApp app = new JetsonApp("/Applications/Google Chrome.app");
+        JetsonApp app = new JetsonApp("/Applications/Safari.app");
         app.launch();
 
-        // Interact with the application
-        app.findElementByName("Login").click();
-        app.findElementByName("Username").sendKeys("your-username");
-        app.findElementByName("Password").sendKeys("your-password");
-        app.findElementByName("LoginButton").click();
+        // Search for yelp
+        Input searchBar = app.allInputs().byPlaceholder("Search or enter website name");
+        searchbar.sendKeys("yelp.com");
 
-        app.findElementByName("Search").sendKeys("Uber Eats");
-        app.findElementByName("SearchButton").click();
-
-        // Add more steps as needed to complete the order
+        // Add more steps as needed to complete the order: could use Selenium
 
         app.close();
     }

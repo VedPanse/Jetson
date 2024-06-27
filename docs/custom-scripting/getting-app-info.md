@@ -62,3 +62,6 @@ Hidden: false
 ## Conclusion
 
 Retrieving basic information about the target application can help you customize and interact with it more effectively using Jetson. By leveraging the `getInfo()` method, you can easily access essential details about the application, allowing for more informed and dynamic scripting.
+
+[Previous](custom-scripting.md)<br>
+[Next](interacting-with-components.md)
