@@ -1,14 +1,39 @@
 {
-  "name": "$name$",
-  "version": "$version$",
-  "description": "$END$",
-  "main": "$main$",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "routine": {
+    "name": "first-project",
+    "author": "John Doe",
+    "description": "My First Project in Jetson"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/VedPanse/Jetson.git"
+  "schedule": {
+    "time": ["08:00", "23:00"],
+    "days": ["Monday", "Wednesday", "Friday"]
   },
-  "private": true
+  "applications": [
+    {
+      "name": "Home automation",
+      "path": "/Applications/Home.app",
+      "actions": [
+        {
+          "type": "click",
+          "target": [600, 200]
+        },
+        {
+          "type": "input",
+          "target": [20, 40],
+          "value": "Sample text - this should go in the input field"
+        }
+      ]
+    },
+    {
+      "name": "Food ordering automation",
+      "path": "/Applications/Chrome.app",
+      "actions": [
+        {
+          "type": "upload",
+          "target": [200, 100],
+          "files": ["/Users/example/file1.txt"]
+        }
+      ]
+    }
+  ]
 }
