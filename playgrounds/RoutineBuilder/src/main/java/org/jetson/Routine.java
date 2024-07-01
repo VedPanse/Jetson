@@ -1,5 +1,6 @@
 package org.jetson;
 
+import java.io.FileNotFoundException;
 import java.util.Arrays;
 
 /**
@@ -56,6 +57,15 @@ public class Routine {
      */
     public Application[] getTargetApplications() {
         return Arrays.copyOf(targetApplications, targetApplications.length);
+    }
+
+    /**
+     * Launches all the applications
+     */
+    public void launchAll() throws FileNotFoundException {
+        for (Application targetApplication : targetApplications) {
+            targetApplication.launch();
+        }
     }
 
     /**

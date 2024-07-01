@@ -1,6 +1,10 @@
 package org.jetson;
 
+import java.awt.*;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Arrays;
+import java.io.File;
 
 /**
  * Defines the properties of an application. This class also deals with Application launching.
@@ -73,6 +77,18 @@ public class Application {
     public void executeScript() {
         if (getScriptPath() != null) {
             System.out.println("Should execute script " + scriptPath);
+        }
+    }
+
+    /**
+     * Launches the application using the path instance variable.
+     */
+    public void launch() throws FileNotFoundException {
+        File file = new File(path);
+        try {
+            Desktop.getDesktop().open(file);
+        } catch (IOException e) {
+            throw new FileNotFoundException("Cannot find application file defined at " + path);
         }
     }
 
