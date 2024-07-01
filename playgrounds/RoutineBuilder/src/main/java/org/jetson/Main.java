@@ -1,8 +1,5 @@
 package org.jetson;
 
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
-import org.json.simple.parser.JSONParser;
 
 public class Main {
     public static void main(String[] JSONPaths) {
@@ -12,9 +9,8 @@ public class Main {
             // Parse all the JSON files
                 // get a hashmap for routine, applications
             JsonParser parser = new JsonParser("file://" + path);
-            System.out.println(parser.getRoutine());
-            System.out.println(parser.getApplications());
-
+            Routine routine = parser.getRoutine();
+            System.out.println(routine);
             // Make a Routine type with the hashmap values
                 // Make an Application type for each application in hashmap
                     // Make an Action type for each action in application
